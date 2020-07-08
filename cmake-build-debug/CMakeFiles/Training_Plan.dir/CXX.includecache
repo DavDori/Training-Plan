@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/davide/Desktop/projects/Training-Plan/include/exercise.h
+string
+-
+cmath
+-
+
+/home/davide/Desktop/projects/Training-Plan/include/gym.h
+
+/home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
+
+/home/davide/Desktop/projects/Training-Plan/main.cpp
+iostream
+-
+include/exercise.h
+/home/davide/Desktop/projects/Training-Plan/include/exercise.h
+
+/home/davide/Desktop/projects/Training-Plan/src/exercise.cpp
+sstream
+-
+iomanip
+-
+string
+-
+iostream
+-
+../include/exercise.h
+/home/davide/Desktop/projects/Training-Plan/include/exercise.h
+
+/home/davide/Desktop/projects/Training-Plan/src/gym.cpp
+../include/gym.h
+/home/davide/Desktop/projects/Training-Plan/include/gym.h
+
+/home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp
+../include/trainingPlan.h
+/home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
+

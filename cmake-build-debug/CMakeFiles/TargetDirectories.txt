@@ -1,0 +1,3 @@
+/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir
+/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/edit_cache.dir
