@@ -3,6 +3,8 @@
 
 CMakeFiles/Training_Plan.dir/main.cpp.o
  /home/davide/Desktop/projects/Training-Plan/include/exercise.h
+ /home/davide/Desktop/projects/Training-Plan/include/gym.h
+ /home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
  /home/davide/Desktop/projects/Training-Plan/main.cpp
 CMakeFiles/Training_Plan.dir/src/exercise.cpp.o
  /home/davide/Desktop/projects/Training-Plan/include/exercise.h
@@ -11,5 +13,7 @@ CMakeFiles/Training_Plan.dir/src/gym.cpp.o
  /home/davide/Desktop/projects/Training-Plan/include/gym.h
  /home/davide/Desktop/projects/Training-Plan/src/gym.cpp
 CMakeFiles/Training_Plan.dir/src/trainingPlan.cpp.o
+ /home/davide/Desktop/projects/Training-Plan/include/exercise.h
+ /home/davide/Desktop/projects/Training-Plan/include/gym.h
  /home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
  /home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp

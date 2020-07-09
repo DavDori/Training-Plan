@@ -3,9 +3,7 @@
 //
 
 #include <sstream>
-#include <iomanip>
-#include <string>
-#include <iostream>
+
 #include "../include/exercise.h"
 
 ExerciseTimed::ExerciseTimed(string name, string description, double mf, double cf, double min, int sets)

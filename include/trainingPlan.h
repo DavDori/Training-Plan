@@ -5,10 +5,27 @@
 #ifndef TRAINING_PLAN_TRAININGPLAN_H
 #define TRAINING_PLAN_TRAININGPLAN_H
 
+#include "exercise.h"
+#include "gym.h"
 
-class trainingPlan {
+class TrainingPlan {
+protected:
+    int days;
+    string name;
+    string description;
+    Exercise** exerciseList;
+    int indexExercizes;
 
+public:
+    TrainingPlan(string name, string desc, int days);
+    TrainingPlan(const TrainingPlan& other);
+    ~TrainingPlan() { delete[] exerciseList;}
+
+    double getClories(const GymMember& person) const;
+    double getMuscle(const GymMember& person) const;
+    void addExercise(Exercise* e);
+
+    string toString() const;
 };
-
 
 #endif //TRAINING_PLAN_TRAININGPLAN_H
