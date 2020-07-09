@@ -5,6 +5,9 @@
 using namespace std;
 
 int main() {
+
+    GymMember P1("John","J",22,50,1.70);
+
     string name1 = "ROCKSMASHER";
     string desc1 = "Start in the sumo pose next to a big boulder,\n rotate the torso and start hitting with the hand palm";
     Exercise* E1 = new ExerciseTimed(name1, desc1, 0.9, 0.1, 2, 3);
