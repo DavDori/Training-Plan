@@ -33,7 +33,7 @@ double TrainingPlan::getClories(const GymMember &person) const {
 
     if(exerciseList != nullptr){
         for(int i = 0; i < indexExercizes; i++){
-            res += exerciseList[i]->getCaloriesConsumed() * factor;
+            res += exerciseList[i]->getCaloriesConsumed() / factor;
         }
     }
     return res;
@@ -49,7 +49,7 @@ double TrainingPlan::getMuscle(const GymMember &person) const {
 
     if(exerciseList != nullptr){
         for(int i = 0; i < indexExercizes; i++){
-            res += exerciseList[i]->getMuscleGain() / factor;
+            res += exerciseList[i]->getMuscleGain() * factor;
         }
     }
     return res;
@@ -97,7 +97,5 @@ Exercise *TrainingPlan::getExercize(string name) const{
     }
     return res;
 }
-//-----------------------------------------------------------------------------------
-
 
 

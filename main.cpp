@@ -7,6 +7,7 @@ using namespace std;
 int main() {
 
     GymMember P1("John","J",22,50,1.70);
+    GymMember P2("Jack","J",30,100,1.50);
 
     string name1 = "ROCKSMASHER";
     string desc1 = "Start in the sumo pose next to a big boulder,\n rotate the torso and start hitting with the hand palm";
@@ -18,12 +19,14 @@ int main() {
 
     TrainingPlan myPlan("BIG","Go big or go home", 30);
     myPlan.addExercise(E1);
-    myPlan.addExercise(E2);
 
     cout << myPlan.toString() << endl;
     cout << P1.getName() << endl;
-    cout << "Burned calories per day: " << myPlan.getClories(P1)/myPlan. << endl;
-    cout << "Gained muscle per day: " << myPlan.getMuscle(P1) << endl;
+    cout << "Burned calories per day: " << myPlan.getClories(P1)/myPlan.getDays() << endl;
+    cout << "Gained muscle per day: " << myPlan.getMuscle(P1)/myPlan.getDays() << endl;
+    cout << P2.getName() << endl;
+    cout << "Burned calories per day: " << myPlan.getClories(P2)/myPlan.getDays() << endl;
+    cout << "Gained muscle per day: " << myPlan.getMuscle(P2)/myPlan.getDays() << endl;
 
     return 0;
 }

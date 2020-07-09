@@ -28,7 +28,7 @@ public:
     int getDays() const { return days;}
     string getName() const { return name;}
     string getDescription() const { return description;}
-    
+
     Exercise* getExercize(string name) const;
     string toString() const;
 };
