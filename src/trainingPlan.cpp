@@ -23,7 +23,7 @@ TrainingPlan::TrainingPlan(const TrainingPlan& other){
     }
 }
 
-double TrainingPlan::getClories(const GymMember &person) const {
+double TrainingPlan::getCaloriesDay(const GymMember &person) const {
     double res = 0.0;
     /*
      * BMI is used to make an assumption on who easy is for a person to burn
@@ -39,7 +39,7 @@ double TrainingPlan::getClories(const GymMember &person) const {
     return res;
 }
 
-double TrainingPlan::getMuscle(const GymMember &person) const {
+double TrainingPlan::getMuscleDay(const GymMember &person) const {
     double res = 0.0;
     /*
      * BMI is used to make an assumption on who easy is for a person to gain
@@ -96,6 +96,14 @@ Exercise *TrainingPlan::getExercize(string name) const{
         }
     }
     return res;
+}
+
+double TrainingPlan::getCalories(const GymMember &person) const {
+    return days * getCaloriesDay(person);
+}
+
+double TrainingPlan::getMuscle(const GymMember &person) const {
+    return days * getMuscleDay(person);
 }
 
 

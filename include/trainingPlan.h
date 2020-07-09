@@ -21,7 +21,9 @@ public:
     TrainingPlan(const TrainingPlan& other);
     ~TrainingPlan() { delete[] exerciseList;}
 
-    double getClories(const GymMember& person) const;
+    double getCaloriesDay(const GymMember& person) const;
+    double getMuscleDay(const GymMember& person) const;
+    double getCalories(const GymMember& person) const;
     double getMuscle(const GymMember& person) const;
     void addExercise(Exercise* e);
 

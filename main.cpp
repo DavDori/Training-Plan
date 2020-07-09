@@ -22,11 +22,11 @@ int main() {
 
     cout << myPlan.toString() << endl;
     cout << P1.getName() << endl;
-    cout << "Burned calories per day: " << myPlan.getClories(P1)/myPlan.getDays() << endl;
-    cout << "Gained muscle per day: " << myPlan.getMuscle(P1)/myPlan.getDays() << endl;
+    cout << "Burned calories per day: " << myPlan.getCaloriesDay(P1) << " g" << endl;
+    cout << "Gained muscle per day: " << myPlan.getMuscle(P1)/myPlan.getDays() << " g" << endl;
     cout << P2.getName() << endl;
-    cout << "Burned calories per day: " << myPlan.getClories(P2)/myPlan.getDays() << endl;
-    cout << "Gained muscle per day: " << myPlan.getMuscle(P2)/myPlan.getDays() << endl;
+    cout << "Burned calories per day: " << myPlan.getCaloriesDay(P2) << " g" << endl;
+    cout << "Gained muscle per day: " << myPlan.getMuscleDay(P2) << " g" << endl;
 
     return 0;
 }
