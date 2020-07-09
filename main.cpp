@@ -21,6 +21,9 @@ int main() {
     myPlan.addExercise(E2);
 
     cout << myPlan.toString() << endl;
+    cout << P1.getName() << endl;
+    cout << "Burned calories per day: " << myPlan.getClories(P1)/myPlan. << endl;
+    cout << "Gained muscle per day: " << myPlan.getMuscle(P1) << endl;
 
     return 0;
 }

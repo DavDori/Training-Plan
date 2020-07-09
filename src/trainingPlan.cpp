@@ -86,6 +86,17 @@ string TrainingPlan::toString() const {
 
     return stream.str();
 }
+
+Exercise *TrainingPlan::getExercize(string name) const{
+    Exercise *res = nullptr;
+    for(int i = 0; i < indexExercizes; i++)
+    {
+        if(name == exerciseList[i]->getName()){
+            res = exerciseList[i];
+        }
+    }
+    return res;
+}
 //-----------------------------------------------------------------------------------
 
 
