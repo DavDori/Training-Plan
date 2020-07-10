@@ -6,27 +6,37 @@ using namespace std;
 
 int main() {
 
-    GymMember P1("John","J",22,50,1.70);
-    GymMember P2("Jack","J",30,100,1.50);
+    GymMember P1("John","J",22,50,1.70,10,1);
+    GymMember P2("Jack","J",30,100,1.70,1,10);
 
-    string name1 = "ROCKSMASHER";
-    string desc1 = "Start in the sumo pose next to a big boulder,\n rotate the torso and start hitting with the hand palm";
-    Exercise* E1 = new ExerciseTimed(name1, desc1, 0.9, 0.1, 2, 3);
+    string name1 = "Running";
+    string desc1 = "Good for your endurance and great cardio exercise";
+    Exercise* E1 = new ExerciseTimed(name1, desc1, 0.01, 0.5, 15, 1);
+    string name2 = "Jumps";
+    string desc2 = "jump! ";
+    Exercise* E2 = new ExerciseTimed(name2, desc2, 0.2, 0.6, 1, 3);
 
-    string name2 = "JACK";
-    string desc2 = "Start next to a car, in the squat position,\n grab a car side and lift the car, hold on until the spotter replaces the wheel.\n Then put the car down and jump";
-    Exercise* E2 = new ExerciseRep(name2, desc2, 0.95, 0.1, 5, 5000);
+    string name3 = "CURL";
+    string desc3 = "Focus on the biceps";
+    Exercise* E3 = new ExerciseRep(name3, desc3, 0.5, 0.01, 10, 10, 4);
 
-    TrainingPlan myPlan("BIG","Go big or go home", 30);
-    myPlan.addExercise(E1);
+    string name4 = "PRESS";
+    string desc4 = "Focus on the legs muscles";
+    Exercise* E4 = new ExerciseRep(name4, desc4, 0.6, 0.01, 12, 100, 3);
 
-    cout << myPlan.toString() << endl;
-    cout << P1.getName() << endl;
-    cout << "Burned calories per day: " << myPlan.getCaloriesDay(P1) << " g" << endl;
-    cout << "Gained muscle per day: " << myPlan.getMuscle(P1)/myPlan.getDays() << " g" << endl;
-    cout << P2.getName() << endl;
-    cout << "Burned calories per day: " << myPlan.getCaloriesDay(P2) << " g" << endl;
-    cout << "Gained muscle per day: " << myPlan.getMuscleDay(P2) << " g" << endl;
+    TrainingPlan musclePlan("BIG","Get bigger", 30);
+    musclePlan.addExercise(E3);
+    musclePlan.addExercise(E4);
+
+    TrainingPlan noFatPlan("FIT","Get fit", 30);
+    noFatPlan.addExercise(E1);
+    noFatPlan.addExercise(E2);
+
+    cout << P1.toString() << endl;
+    cout << musclePlan.toString() << endl;
+    cout << "Plan compatibility: " << musclePlan.getCompatibility(P1) << endl;
+    cout << noFatPlan.toString() << endl;
+    cout << "Plan compatibility: " << noFatPlan.getCompatibility(P1) << endl;
 
     return 0;
 }

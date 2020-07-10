@@ -106,4 +106,15 @@ double TrainingPlan::getMuscle(const GymMember &person) const {
     return days * getMuscleDay(person);
 }
 
+double TrainingPlan::getCompatibility(const GymMember &person) const {
+    double totalIntensity = getCalories(person) + getMuscle(person);
+    double caloriesIntensity = getCalories(person) / totalIntensity;
+    double muscleIntensity = getMuscle(person) / totalIntensity;
+
+    double penalty = 0;
+    penalty += pow( caloriesIntensity - person.getCaloriesIntensityGoal(), 2);
+    penalty += pow( muscleIntensity - person.getMuscleIntensityGoal(),2);
+    return penalty;
+}
+
 

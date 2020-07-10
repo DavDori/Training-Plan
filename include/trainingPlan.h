@@ -26,6 +26,7 @@ public:
     double getCalories(const GymMember& person) const;
     double getMuscle(const GymMember& person) const;
     void addExercise(Exercise* e);
+    double getCompatibility(const GymMember& person) const; //distance between person goal and training focus
 
     int getDays() const { return days;}
     string getName() const { return name;}

@@ -21,6 +21,12 @@ iostream
 /home/davide/Desktop/projects/Training-Plan/include/gym.h
 string
 -
+iomanip
+-
+string
+-
+iostream
+-
 
 /home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
 exercise.h
@@ -34,5 +40,13 @@ iostream
 include/exercise.h
 /home/davide/Desktop/projects/Training-Plan/include/exercise.h
 include/trainingPlan.h
+/home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
+
+/home/davide/Desktop/projects/Training-Plan/src/gym.cpp
+../include/gym.h
+/home/davide/Desktop/projects/Training-Plan/include/gym.h
+
+/home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp
+../include/trainingPlan.h
 /home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
 
