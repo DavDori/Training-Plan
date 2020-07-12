@@ -204,6 +204,33 @@ src/gym.cpp.s:
 	$(MAKE) -f CMakeFiles/Training_Plan.dir/build.make CMakeFiles/Training_Plan.dir/src/gym.cpp.s
 .PHONY : src/gym.cpp.s
 
+src/person.o: src/person.cpp.o
+
+.PHONY : src/person.o
+
+# target to build an object file
+src/person.cpp.o:
+	$(MAKE) -f CMakeFiles/Training_Plan.dir/build.make CMakeFiles/Training_Plan.dir/src/person.cpp.o
+.PHONY : src/person.cpp.o
+
+src/person.i: src/person.cpp.i
+
+.PHONY : src/person.i
+
+# target to preprocess a source file
+src/person.cpp.i:
+	$(MAKE) -f CMakeFiles/Training_Plan.dir/build.make CMakeFiles/Training_Plan.dir/src/person.cpp.i
+.PHONY : src/person.cpp.i
+
+src/person.s: src/person.cpp.s
+
+.PHONY : src/person.s
+
+# target to generate assembly for a file
+src/person.cpp.s:
+	$(MAKE) -f CMakeFiles/Training_Plan.dir/build.make CMakeFiles/Training_Plan.dir/src/person.cpp.s
+.PHONY : src/person.cpp.s
+
 src/trainingPlan.o: src/trainingPlan.cpp.o
 
 .PHONY : src/trainingPlan.o
@@ -249,6 +276,9 @@ help:
 	@echo "... src/gym.o"
 	@echo "... src/gym.i"
 	@echo "... src/gym.s"
+	@echo "... src/person.o"
+	@echo "... src/person.i"
+	@echo "... src/person.s"
 	@echo "... src/trainingPlan.o"
 	@echo "... src/trainingPlan.i"
 	@echo "... src/trainingPlan.s"

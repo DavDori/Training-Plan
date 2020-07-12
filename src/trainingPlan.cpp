@@ -4,8 +4,6 @@
 
 #include "../include/trainingPlan.h"
 
-const double normalBMI = 20.0;
-
 TrainingPlan::TrainingPlan(string name, string desc, int days) : name(name), description(desc), days(days) {
     exerciseList = nullptr;
     indexExercizes = 0;
@@ -23,36 +21,30 @@ TrainingPlan::TrainingPlan(const TrainingPlan& other){
     }
 }
 
-double TrainingPlan::getCaloriesDay(const GymMember &person) const {
+double TrainingPlan::getCardio(const GymMember &person) const {
     double res = 0.0;
-    /*
-     * BMI is used to make an assumption on who easy is for a person to burn
-     * calories, in this case, the higher, the more difficult it gets
-     */
-    double factor = person.getBMI() / normalBMI;
+    double totalIntensity = 0.0;  //normalizes the result
 
     if(exerciseList != nullptr){
         for(int i = 0; i < indexExercizes; i++){
-            res += exerciseList[i]->getCaloriesConsumed() / factor;
+            res += exerciseList[i]->getCardioIntensity();
+            totalIntensity += exerciseList[i]->getMuscleIntensity() + exerciseList[i]->getCardioIntensity();
         }
     }
-    return res;
+    return res / totalIntensity;
 }
 
-double TrainingPlan::getMuscleDay(const GymMember &person) const {
+double TrainingPlan::getMuscle(const GymMember &person) const {
     double res = 0.0;
-    /*
-     * BMI is used to make an assumption on who easy is for a person to gain
-     * muscle, in this case, the lower, the more difficult it gets
-     */
-    double factor = person.getBMI() / normalBMI;
+    double totalIntensity = 0.0;  //normalizes the result
 
     if(exerciseList != nullptr){
         for(int i = 0; i < indexExercizes; i++){
-            res += exerciseList[i]->getMuscleGain() * factor;
+            res += exerciseList[i]->getMuscleIntensity();
+            totalIntensity += exerciseList[i]->getMuscleIntensity() + exerciseList[i]->getCardioIntensity();
         }
     }
-    return res;
+    return res / totalIntensity;
 }
 
 void TrainingPlan::addExercise(Exercise *e) {
@@ -98,22 +90,11 @@ Exercise *TrainingPlan::getExercize(string name) const{
     return res;
 }
 
-double TrainingPlan::getCalories(const GymMember &person) const {
-    return days * getCaloriesDay(person);
-}
-
-double TrainingPlan::getMuscle(const GymMember &person) const {
-    return days * getMuscleDay(person);
-}
 
 double TrainingPlan::getCompatibility(const GymMember &person) const {
-    double totalIntensity = getCalories(person) + getMuscle(person);
-    double caloriesIntensity = getCalories(person) / totalIntensity;
-    double muscleIntensity = getMuscle(person) / totalIntensity;
-
     double penalty = 0;
-    penalty += pow( caloriesIntensity - person.getCaloriesIntensityGoal(), 2);
-    penalty += pow( muscleIntensity - person.getMuscleIntensityGoal(),2);
+    penalty += pow( getCardio(person) - person.getCaloriesIntensityGoal(), 2);
+    penalty += pow( getMuscle(person) - person.getMuscleIntensityGoal(),2);
     return penalty;
 }
 

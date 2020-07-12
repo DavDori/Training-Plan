@@ -5,8 +5,10 @@
 using namespace std;
 
 int main() {
-
+    //John wants to gain muscle
     GymMember P1("John","J",22,50,1.70,10,1);
+
+    //Jack wants to loose weight
     GymMember P2("Jack","J",30,100,1.70,1,10);
 
     string name1 = "Running";

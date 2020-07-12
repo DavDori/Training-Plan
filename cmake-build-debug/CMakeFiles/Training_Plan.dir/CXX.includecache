@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/davide/Desktop/projects/Training-Plan/include/exercise.h
-string
--
 cmath
 -
 iomanip
@@ -19,6 +17,12 @@ iostream
 -
 
 /home/davide/Desktop/projects/Training-Plan/include/gym.h
+person.h
+/home/davide/Desktop/projects/Training-Plan/include/person.h
+
+/home/davide/Desktop/projects/Training-Plan/include/person.h
+string
+-
 string
 -
 iomanip
@@ -40,13 +44,5 @@ iostream
 include/exercise.h
 /home/davide/Desktop/projects/Training-Plan/include/exercise.h
 include/trainingPlan.h
-/home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
-
-/home/davide/Desktop/projects/Training-Plan/src/gym.cpp
-../include/gym.h
-/home/davide/Desktop/projects/Training-Plan/include/gym.h
-
-/home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp
-../include/trainingPlan.h
 /home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h
 

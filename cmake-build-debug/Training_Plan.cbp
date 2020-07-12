@@ -90,6 +90,9 @@
 		<Unit filename="/home/davide/Desktop/projects/Training-Plan/include/gym.h">
 			<Option target="Training_Plan"/>
 		</Unit>
+		<Unit filename="/home/davide/Desktop/projects/Training-Plan/include/person.h">
+			<Option target="Training_Plan"/>
+		</Unit>
 		<Unit filename="/home/davide/Desktop/projects/Training-Plan/include/trainingPlan.h">
 			<Option target="Training_Plan"/>
 		</Unit>
@@ -100,6 +103,9 @@
 			<Option target="Training_Plan"/>
 		</Unit>
 		<Unit filename="/home/davide/Desktop/projects/Training-Plan/src/gym.cpp">
+			<Option target="Training_Plan"/>
+		</Unit>
+		<Unit filename="/home/davide/Desktop/projects/Training-Plan/src/person.cpp">
 			<Option target="Training_Plan"/>
 		</Unit>
 		<Unit filename="/home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp">

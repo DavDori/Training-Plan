@@ -21,9 +21,7 @@ public:
     TrainingPlan(const TrainingPlan& other);
     ~TrainingPlan() { delete[] exerciseList;}
 
-    double getCaloriesDay(const GymMember& person) const;
-    double getMuscleDay(const GymMember& person) const;
-    double getCalories(const GymMember& person) const;
+    double getCardio(const GymMember& person) const;
     double getMuscle(const GymMember& person) const;
     void addExercise(Exercise* e);
     double getCompatibility(const GymMember& person) const; //distance between person goal and training focus

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Training_Plan.dir/main.cpp.o CMakeFiles/Training_Plan.dir/src/exercise.cpp.o CMakeFiles/Training_Plan.dir/src/gym.cpp.o CMakeFiles/Training_Plan.dir/src/trainingPlan.cpp.o  -o Training_Plan 
+/usr/bin/c++  -g   CMakeFiles/Training_Plan.dir/main.cpp.o CMakeFiles/Training_Plan.dir/src/exercise.cpp.o CMakeFiles/Training_Plan.dir/src/gym.cpp.o CMakeFiles/Training_Plan.dir/src/trainingPlan.cpp.o CMakeFiles/Training_Plan.dir/src/person.cpp.o  -o Training_Plan 

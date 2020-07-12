@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Training_Plan.dir/main.cpp.o"
   "CMakeFiles/Training_Plan.dir/src/exercise.cpp.o"
   "CMakeFiles/Training_Plan.dir/src/gym.cpp.o"
+  "CMakeFiles/Training_Plan.dir/src/person.cpp.o"
   "CMakeFiles/Training_Plan.dir/src/trainingPlan.cpp.o"
   "Training_Plan"
   "Training_Plan.pdb"

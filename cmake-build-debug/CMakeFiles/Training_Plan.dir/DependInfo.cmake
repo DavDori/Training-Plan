@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/davide/Desktop/projects/Training-Plan/main.cpp" "/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir/main.cpp.o"
   "/home/davide/Desktop/projects/Training-Plan/src/exercise.cpp" "/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir/src/exercise.cpp.o"
   "/home/davide/Desktop/projects/Training-Plan/src/gym.cpp" "/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir/src/gym.cpp.o"
+  "/home/davide/Desktop/projects/Training-Plan/src/person.cpp" "/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir/src/person.cpp.o"
   "/home/davide/Desktop/projects/Training-Plan/src/trainingPlan.cpp" "/home/davide/Desktop/projects/Training-Plan/cmake-build-debug/CMakeFiles/Training_Plan.dir/src/trainingPlan.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

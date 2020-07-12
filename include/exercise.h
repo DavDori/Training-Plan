@@ -5,7 +5,7 @@
 #ifndef TRAINING_PLAN_EXERCISE_H
 #define TRAINING_PLAN_EXERCISE_H
 
-#include <string>
+
 #include <cmath>
 #include <iomanip>
 #include <string>
@@ -26,8 +26,8 @@ public:
     Exercise(string name, string description, double mf, double cf)
         : name(name), description(description), muscleFactor(mf), caloriesFactor(cf) {};
 
-    virtual double getCaloriesConsumed() const  = 0;
-    virtual double getMuscleGain() const = 0;
+    virtual double getCardioIntensity() const  = 0;
+    virtual double getMuscleIntensity() const = 0;
     virtual string toString() const = 0;
 
     string getName() const { return  name;}
@@ -45,13 +45,13 @@ public:
     ExerciseTimed(string name, string description, double mf, double cf, double min, int sets = 1);
     ExerciseTimed(const ExerciseTimed& other);
 
-    double getCaloriesConsumed() const override;
-    double getMuscleGain() const override;
+    double getCardioIntensity() const override;
+    double getMuscleIntensity() const override;
     string toString() const override;
 };
 
 class ExerciseRep : public Exercise {
-private:
+protected:
     int reps;
     int sets;
     double weight; //kg
@@ -60,11 +60,10 @@ public:
     ExerciseRep(string name, string description, double mf, double cf, int reps, double weight ,int sets = 1);
     ExerciseRep(const ExerciseRep& other);
 
-    double getCaloriesConsumed() const override;
-    double getMuscleGain() const override;
-    string toString() const override;
+    double getCardioIntensity() const override;
+    double getMuscleIntensity() const override;
+    virtual string toString() const override;
 
 };
-
 #endif //TRAINING_PLAN_EXERCISE_H
 

@@ -5,31 +5,11 @@
 #ifndef TRAINING_PLAN_GYM_H
 #define TRAINING_PLAN_GYM_H
 
-#include <string>
-#include <iomanip>
-#include <string>
-#include <iostream>
+#include "person.h"
+
 using namespace std;
 
-class Persona {
-protected:
-    string name;
-    string surname;
-    int age;
-
-public:
-    Persona() {}
-    Persona(string nm, string srnm, int age);
-    Persona(const Persona& other);
-
-    string getName() const { return name;}
-    string getSurname() const { return surname;}
-    int getAge() const {return age;}
-    string toString() const;
-
-};
-
-class GymMember : public Persona{
+class GymMember : public Person{
 private:
     double weight; //kg
     double height; //m
@@ -46,7 +26,6 @@ public:
     double getBMI() const { return BMI;}
     double getMuscleIntensityGoal() const { return muscleIntensityGoal;}
     double getCaloriesIntensityGoal() const { return caloriesIntensityGoal;}
-
 };
 
 #endif //TRAINING_PLAN_GYM_H

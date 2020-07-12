@@ -21,12 +21,12 @@ ExerciseTimed::ExerciseTimed(const ExerciseTimed &other) {
     sets = other.sets;
 }
 
-double ExerciseTimed::getCaloriesConsumed() const {
-    return caloriesFactor * pow(min,1.5) *sets;
+double ExerciseTimed::getCardioIntensity() const {
+    return caloriesFactor * min * sets;
 }
 
-double ExerciseTimed::getMuscleGain() const {
-    return muscleFactor * min *sets;;
+double ExerciseTimed::getMuscleIntensity() const {
+    return muscleFactor * min * sets;
 }
 
 string ExerciseTimed::toString() const {
@@ -54,12 +54,12 @@ ExerciseRep::ExerciseRep(const ExerciseRep &other) {
     weight = other.weight;
 }
 
-double ExerciseRep::getCaloriesConsumed() const {
-    return caloriesFactor * weight * pow(reps,2) * sets;
+double ExerciseRep::getCardioIntensity() const {
+    return caloriesFactor * reps * sets;
 }
 
-double ExerciseRep::getMuscleGain() const {
-    return muscleFactor * pow(weight,2)  * reps * sets;
+double ExerciseRep::getMuscleIntensity() const {
+    return muscleFactor * weight  * reps * sets;
 }
 
 string ExerciseRep::toString() const {
